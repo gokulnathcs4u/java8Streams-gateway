@@ -18,8 +18,8 @@ public class Java8streamsGatewayApplication {
 	@Bean
 	public RouteLocator routeLocator(RouteLocatorBuilder routeLocator) {
 		return routeLocator.routes().route(r -> r.path("/coapi/**").uri("lb://COAPI"))
-				.route(r -> r.path("/clientApi/**").uri("lb://CLIENTCONSUMERAPI")).build();
-
+				.route(r -> r.path("/clientApi/**").uri("lb://CLIENTCONSUMERAPI"))
+				.route(r -> r.path("/novel/**").uri("lb://NOVELAPI")).build();
 	}
 
 }
